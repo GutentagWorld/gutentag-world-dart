@@ -1,0 +1,22 @@
+name: Gutentag, World!
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: dart-lang/setup-dart@v1
+
+      - name: Run
+        run: dart run bin/gutentag_world.dart
+
+      - name: Verify output
+        run: bash test.sh

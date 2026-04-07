@@ -1,0 +1,6 @@
+name: gutentag_world
+description: Gutentag, World!
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
